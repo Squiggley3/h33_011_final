@@ -41,6 +41,7 @@ button:hover{
 }
 
 #date{
+    font-family: 'ZCOOL KuaiLe', sans-serif;
     position:absolute;
     top:4vh;
     left: 50px;
@@ -53,6 +54,7 @@ button:hover{
 }
 
 #clock{
+    font-family: 'ZCOOL KuaiLe', sans-serif;
     position:absolute;
     top:4vh;
     right: 50px;
@@ -61,7 +63,6 @@ button:hover{
     padding: 5px;
     width: 120px;
     border-radius: 5px;
-    font-family: 'ZCOOL KuaiLe', sans-serif;
 
 }
 
