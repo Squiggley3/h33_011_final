@@ -2,3 +2,41 @@
 <!--
 `${mm}/${dd}/${yyyy}`
 [mm,dd,yyyy].join("/");-->
+
+
+$("#saveNotebtn").click(function(){
+    var currentNotes = $("#note-area").val();
+    localStorage.setItem("notes", currentNotes); 
+});
+
+
+$(".delete-icon").click(deleteNote)
+
+
+
+
+
+
+function saveNotes() {
+ var allNotes = $(".widget_save").children();
+ var length = allNotes.length;
+ localStorage.setItem('totalNotes', length);
+ for(var counter = 0; counter < length; counter ++) {
+   var currentNote = allNotes[counter];
+   var note = $(currentNote).html();
+   localStorage.setItem("note" + counter, note);
+ }
+ }
+    $("#saveNotebtn").click(saveNotes);
+  
+
+  var total = localStorage.getItem("totalNotes");
+  for (i = 0; i < total; i++){
+    var note = localStorage.getItem('note' + i)
+    var noteHTML = "<div class = 'note'>" + note + "</div>";
+    $(".widget_save").append(noteHTML);
+    $(".delete-icon").click(deleteNote);
+  }
+
+
+
